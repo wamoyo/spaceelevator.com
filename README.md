@@ -1,5 +1,5 @@
 
-# SpaceElevator.com Website v0.1
+# SpaceElevator.com Website
 
-The 1st SpaceElevator.com website.
+Visit the [SpaceElevator.com](https://spaceelevator.com) website.
 
