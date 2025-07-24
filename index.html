@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Elevator - The Future of Space Access</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero-container">
+        <div class="overlay"></div>
+        
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo-white.svg" alt="Space Elevator" class="logo-icon">
+                    <h1 class="logo">SPACE ELEVATOR</h1>
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <button class="close-menu" onclick="toggleMobileMenu()">&times;</button>
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="technology.html" class="nav-link">Technology</a></li>
+                    <li><a href="contact.html" class="nav-link">Get Involved</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-container-inner">
+                <h2 class="hero-title">
+                    <span class="title-the">The</span>
+                    <span class="title-main">Space Elevator</span>
+                    <span class="title-company">Company</span>
+                </h2>
+                <p class="hero-subtitle">Join us in building humanity's bridge to the stars</p>
+
+                <button class="video-button" onclick="openVideo()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Watch Bloomberg Interview
+                </button>
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            <div class="hero-container-inner">
+                <div class="copyright">
+                    <p>© 2024 The Space Elevator Company</p>
+                    <p class="fun-copyright">🚀 Building bridges to the stars since the future began ✨</p>
+                    <p class="smaller-text">Patents pending on orbital real estate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <div class="modal-controls">
+                <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                    </svg>
+                </button>
+                <span class="close-modal" onclick="closeVideo()">&times;</span>
+            </div>
+            <video id="interviewVideo" controls>
+                <source src="videos/bloomberg-interview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function openVideo() {
+            var modal = document.getElementById('videoModal');
+            var video = document.getElementById('interviewVideo');
+            
+            modal.style.display = 'flex';
+            
+            // Go straight to fullscreen
+            modal.requestFullscreen().then(() => {
+                video.play();
+            }).catch(err => {
+                console.log('Fullscreen not supported, playing in modal:', err.message);
+                video.play();
+            });
+        }
+
+        function closeVideo() {
+            var video = document.getElementById('interviewVideo');
+            var modal = document.getElementById('videoModal');
+            
+            video.pause();
+            video.currentTime = 0;
+            
+            // Exit fullscreen first, then hide modal
+            if (document.fullscreenElement) {
+                document.exitFullscreen().then(() => {
+                    modal.style.display = 'none';
+                });
+            } else {
+                modal.style.display = 'none';
+            }
+        }
+
+        function toggleFullscreen() {
+            var modal = document.getElementById('videoModal');
+            
+            if (!document.fullscreenElement) {
+                modal.requestFullscreen().catch(err => {
+                    console.log('Error attempting to enable fullscreen:', err.message);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        function toggleMobileMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var navLinks = document.querySelector('.nav-links');
+                var menuToggle = document.querySelector('.mobile-menu-toggle');
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var navLinks = document.querySelector('.nav-links');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            var isClickInsideMenu = navLinks.contains(event.target);
+            var isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById('videoModal');
+            if (event.target == modal) {
+                closeVideo();
+            }
+        }
+
+        // Handle fullscreen changes
+        document.addEventListener('fullscreenchange', function() {
+            var modal = document.getElementById('videoModal');
+            var video = document.getElementById('interviewVideo');
+            
+            // If user exits fullscreen manually, close the modal
+            if (!document.fullscreenElement && modal.style.display === 'flex') {
+                video.pause();
+                video.currentTime = 0;
+                modal.style.display = 'none';
+            }
+        });
+
+        // Keyboard shortcuts for video modal
+        document.addEventListener('keydown', function(event) {
+            var modal = document.getElementById('videoModal');
+            if (modal.style.display === 'flex') {
+                if (event.key === 'Escape') {
+                    closeVideo();
+                } else if (event.key === 'f' || event.key === 'F') {
+                    toggleFullscreen();
+                } else if (event.key === ' ') {
+                    event.preventDefault();
+                    var video = document.getElementById('interviewVideo');
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Space Elevator</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <nav class="main-nav page-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo-white.svg" alt="Space Elevator" class="logo-icon">
+                <h1 class="logo">SPACE ELEVATOR</h1>
+            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <button class="close-menu" onclick="toggleMobileMenu()">&times;</button>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="technology.html" class="nav-link">Technology</a></li>
+                <li><a href="contact.html" class="nav-link">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Building Tomorrow's Bridge to Space</h1>
+                <p class="page-subtitle">Led by the world's foremost expert on space elevator technology</p>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <div class="content-wrapper">
+                <div class="founder-section">
+                    <h2 class="section-title">Meet Our Founder</h2>
+                    <div class="founder-grid">
+                        <div class="founder-content">
+                            <h3 class="founder-name">Dr. Bradley Edwards, PhD</h3>
+                            <p class="founder-title">Physicist, Former Los Alamos Researcher</p>
+                            <p class="founder-subtitle">Global Leading Expert on Space Elevator Technology</p>
+                            
+                            <div class="founder-bio">
+                                <p>Dr. Bradley Edwards is the pioneering force behind modern space elevator development. As the lead scientist on NASA's Institute for Advanced Concepts feasibility study in 2003, he demonstrated that space elevator technology is not just possible—it's achievable with today's technology.</p>
+                                
+                                <p>With a distinguished career spanning Los Alamos National Laboratory and groundbreaking research in advanced materials and space systems, Dr. Edwards has dedicated his life to making space accessible to humanity.</p>
+                                
+                                <blockquote class="founder-quote">
+                                    "There is no reason we can't build one today. We simply need the will to do it."
+                                    <cite>- Dr. Bradley Edwards</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="founder-image">
+                            <div class="image-placeholder">
+                                <div class="placeholder-content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vision-section">
+                    <h2 class="section-title">Our Vision</h2>
+                    <div class="vision-grid">
+                        <div class="vision-card">
+                            <div class="vision-icon">🚀</div>
+                            <h3>Transformative Access</h3>
+                            <p>Make space as accessible as air travel, opening unprecedented opportunities for exploration and commerce.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="vision-icon">🌍</div>
+                            <h3>Sustainable Future</h3>
+                            <p>Enable clean energy solutions like space-based solar power to address Earth's growing energy needs.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="vision-icon">⚡</div>
+                            <h3>Economic Revolution</h3>
+                            <p>Reduce space transportation costs by 99%, enabling new industries and opportunities in orbit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-section">
+                    <h2 class="section-title">From Vision to Reality</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">1895</div>
+                            <div class="timeline-content">
+                                <h4>The Original Vision</h4>
+                                <p>Konstantin Tsiolkovsky first conceives the idea of a space elevator, inspiring generations of scientists.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2003</div>
+                            <div class="timeline-content">
+                                <h4>NASA Feasibility Study</h4>
+                                <p>Dr. Edwards leads groundbreaking study proving space elevator technology is achievable.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Today</div>
+                            <div class="timeline-content">
+                                <h4>Making It Happen</h4>
+                                <p>Advanced carbon nanotube technology and engineering solutions bring the space elevator within reach.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function toggleMobileMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var navLinks = document.querySelector('.nav-links');
+                var menuToggle = document.querySelector('.mobile-menu-toggle');
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var navLinks = document.querySelector('.nav-links');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            var isClickInsideMenu = navLinks.contains(event.target);
+            var isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

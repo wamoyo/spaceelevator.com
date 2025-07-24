@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Space Elevator</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <nav class="main-nav page-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo-white.svg" alt="Space Elevator" class="logo-icon">
+                <h1 class="logo">SPACE ELEVATOR</h1>
+            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <button class="close-menu" onclick="toggleMobileMenu()">&times;</button>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="technology.html" class="nav-link">Technology</a></li>
+                <li><a href="contact.html" class="nav-link active">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Join the Space Revolution</h1>
+                <p class="page-subtitle">Be part of humanity's greatest engineering achievement</p>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <div class="content-wrapper">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <p style="font-size: 1.3rem; opacity: 0.9;">
+                        The space elevator isn't just a project—it's a movement. We're looking for visionaries, 
+                        innovators, and believers who want to change the course of human history.
+                    </p>
+                </div>
+
+                <h2 class="section-title">How You Can Get Involved</h2>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>I'm interested in:</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="updates" name="interest" value="updates">
+                                <label for="updates">General Updates</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="invest" name="interest" value="invest">
+                                <label for="invest">Investment Opportunities</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="media" name="interest" value="media">
+                                <label for="media">Media Inquiries</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="science" name="interest" value="science">
+                                <label for="science">Science & Engineering Team</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="art" name="interest" value="art">
+                                <label for="art">Art & Architecture Team</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="use" name="interest" value="use">
+                                <label for="use">Use The Space Elevator</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="business" name="interest" value="business">
+                                <label for="business">Build Your Business With Us</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="5" class="form-control"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Join the Future</button>
+                </form>
+
+                <div id="formMessage" style="text-align: center; margin-top: 2rem; font-size: 1.2rem; color: #00d4ff; display: none;"></div>
+
+                <div style="margin-top: 5rem;">
+                    <h2 class="section-title">Ways to Contribute</h2>
+                    <div class="vision-grid">
+                        <div class="vision-card">
+                            <div class="vision-icon">💡</div>
+                            <h3>Share Your Expertise</h3>
+                            <p>Engineers, scientists, and visionaries—your knowledge can help make this dream a reality.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="vision-icon">📢</div>
+                            <h3>Spread the Word</h3>
+                            <p>Help us build momentum by sharing our vision with your network and community.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="vision-icon">🤝</div>
+                            <h3>Partner With Us</h3>
+                            <p>Organizations and businesses can join us in developing the technologies and infrastructure needed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: rgba(0, 212, 255, 0.05); border-radius: 10px;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Ready to Make History?</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">
+                        The space elevator will be built by those bold enough to believe in tomorrow. 
+                        Join us, and let's build the future together.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message (in real implementation, this would send to backend)
+            var messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = 'Thank you for your interest! We\'ll be in touch soon.';
+            messageDiv.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(function() {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        });
+
+        function toggleMobileMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var navLinks = document.querySelector('.nav-links');
+                var menuToggle = document.querySelector('.mobile-menu-toggle');
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var navLinks = document.querySelector('.nav-links');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            var isClickInsideMenu = navLinks.contains(event.target);
+            var isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
