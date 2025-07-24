@@ -13,13 +13,11 @@
 }
 
 html, body {
-    overflow-x: hidden;
     min-width: 320px;
 }
 
 body {
     font-family: 'Meteoric', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    overflow-x: hidden;
 }
 
 .hero-container {
@@ -34,7 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
 }
 
 .overlay {
@@ -307,6 +304,7 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    margin-bottom: .5rem;
 }
 
 .copyright p {
