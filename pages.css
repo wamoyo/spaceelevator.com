@@ -8,12 +8,12 @@
 }
 
 .nav-link.active {
-    color: #00d4ff;
+    color: #deb861;
 }
 
 .nav-link.active:after {
     width: 100%;
-    background: #00d4ff;
+    background: #deb861;
 }
 
 .page-container {
@@ -31,7 +31,7 @@
 }
 
 .page-hero-content {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
@@ -45,7 +45,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(222, 184, 97, 0.1) 0%, transparent 70%);
     animation: rotate 30s linear infinite;
 }
 
@@ -74,10 +74,16 @@
     padding: 4rem 0;
 }
 
-.content-wrapper {
-    max-width: 1200px;
+.page-container-wrapper {
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.content-wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .section-title {
@@ -97,7 +103,7 @@
     transform: translateX(-50%);
     width: 100px;
     height: 2px;
-    background: #00d4ff;
+    background: #deb861;
 }
 
 /* Founder Section */
@@ -117,7 +123,7 @@
     font-weight: 300;
     letter-spacing: 0.1rem;
     margin-bottom: 0.5rem;
-    color: #00d4ff;
+    color: #deb861;
 }
 
 .founder-title {
@@ -140,7 +146,7 @@
 }
 
 .founder-quote {
-    border-left: 3px solid #00d4ff;
+    border-left: 3px solid #deb861;
     padding-left: 2rem;
     margin: 2rem 0;
     font-size: 1.3rem;
@@ -171,7 +177,7 @@
 .placeholder-content svg {
     width: 100px;
     height: 100px;
-    color: #00d4ff;
+    color: #deb861;
     opacity: 0.3;
 }
 
@@ -188,7 +194,7 @@
 
 .vision-card {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    border: 1px solid rgba(222, 184, 97, 0.2);
     border-radius: 10px;
     padding: 2.5rem;
     text-align: center;
@@ -197,8 +203,8 @@
 
 .vision-card:hover {
     transform: translateY(-5px);
-    background: rgba(0, 212, 255, 0.05);
-    border-color: rgba(0, 212, 255, 0.4);
+    background: rgba(222, 184, 97, 0.05);
+    border-color: rgba(222, 184, 97, 0.4);
 }
 
 .vision-icon {
@@ -211,7 +217,7 @@
     font-weight: 300;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
-    color: #00d4ff;
+    color: #deb861;
 }
 
 .vision-card p {
@@ -233,7 +239,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgba(0, 212, 255, 0.3);
+    background: rgba(222, 184, 97, 0.3);
 }
 
 .timeline-item {
@@ -248,15 +254,15 @@
     top: 5px;
     width: 12px;
     height: 12px;
-    background: #00d4ff;
+    background: #deb861;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 20px rgba(222, 184, 97, 0.5);
 }
 
 .timeline-date {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #00d4ff;
+    color: #deb861;
     margin-bottom: 0.5rem;
 }
 
@@ -282,21 +288,21 @@
 
 .tech-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    border: 1px solid rgba(222, 184, 97, 0.2);
     border-radius: 10px;
     padding: 2rem;
     transition: all 0.3s ease;
 }
 
 .tech-card:hover {
-    background: rgba(0, 212, 255, 0.05);
+    background: rgba(222, 184, 97, 0.05);
     transform: scale(1.02);
 }
 
 .tech-card h3 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: #00d4ff;
+    color: #deb861;
     margin-bottom: 1rem;
 }
 
@@ -314,7 +320,7 @@
     content: '▸';
     position: absolute;
     left: 0;
-    color: #00d4ff;
+    color: #deb861;
 }
 
 /* Contact Form */
@@ -331,14 +337,14 @@
     display: block;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: #00d4ff;
+    color: #deb861;
 }
 
 .form-control {
     width: 100%;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 212, 255, 0.3);
+    border: 1px solid rgba(222, 184, 97, 0.3);
     border-radius: 5px;
     color: #fff;
     font-family: inherit;
@@ -348,7 +354,7 @@
 
 .form-control:focus {
     outline: none;
-    border-color: #00d4ff;
+    border-color: #deb861;
     background: rgba(255, 255, 255, 0.08);
 }
 
@@ -372,7 +378,7 @@
 }
 
 .submit-button {
-    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    background: linear-gradient(135deg, #deb861, #0099cc);
     color: #fff;
     padding: 1rem 3rem;
     font-size: 1.1rem;
@@ -388,7 +394,7 @@
 
 .submit-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(222, 184, 97, 0.3);
 }
 
 /* Prevent text overflow on all elements */

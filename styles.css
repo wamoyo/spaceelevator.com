@@ -76,9 +76,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.logo-link:hover {
-    transform: scale(1.02);
-}
 
 .logo-icon {
     width: clamp(32px, 5vw, 42px);
@@ -120,7 +117,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #00d4ff;
+    background: #deb861;
     transition: width 0.3s ease;
 }
 
@@ -129,7 +126,7 @@ body {
 }
 
 .nav-link:hover {
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+    text-shadow: 0 0 10px rgba(222, 184, 97, 0.8);
 }
 
 .hero-content {
@@ -147,12 +144,11 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 300;
-    letter-spacing: 0.3rem;
+    font-size: clamp(2.5rem, 1.5vw, 5rem);
+    font-weight: 500;
     margin-bottom: 1rem;
     text-shadow: 
-        0 0 30px rgba(0, 212, 255, 0.5),
+        0 0 30px rgba(222, 184, 97, 0.5),
         0 2px 10px rgba(0, 0, 0, 0.8),
         0 4px 20px rgba(0, 0, 0, 0.9);
     animation: glow 3s ease-in-out infinite alternate;
@@ -162,56 +158,56 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     line-height: 1.1;
 }
 
 .title-the {
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-    font-weight: 300;
-    opacity: 0.7;
+    position: relative
+    font-size: clamp(1.5rem, 1.5vw, 1.2rem);
+    font-weight: 500;
     margin-bottom: -0.2em;
-    align-self: flex-start;
-    margin-left: 2rem;
+    margin-left: -24rem;
+    /* align-self: flex-start; */
+    /* margin-left: 2rem; */
 }
 
 .title-main {
     font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 300;
-    letter-spacing: clamp(0.1rem, 0.3vw, 0.3rem);
+    font-weight: 500;
     margin: 0;
     text-align: center;
 }
 
 .title-company {
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-    font-weight: 300;
-    opacity: 0.7;
-    margin-top: -0.2em;
-    align-self: flex-end;
-    margin-right: 2rem;
+    font-size: clamp(2.2rem, 1.5vw, 3.2rem);
+    font-weight: 500;
+    margin-right: -20rem;
+    /* align-self: flex-end; */
+    /* margin-right: 2rem; */
 }
 
 @keyframes glow {
     from { 
         text-shadow: 
-            0 0 30px rgba(0, 212, 255, 0.5),
+            0 0 30px rgba(222, 184, 97, 0.5),
             0 2px 10px rgba(0, 0, 0, 0.8),
             0 4px 20px rgba(0, 0, 0, 0.9);
     }
     to { 
         text-shadow: 
-            0 0 40px rgba(0, 212, 255, 0.8), 
-            0 0 60px rgba(0, 212, 255, 0.4),
+            0 0 40px rgba(222, 184, 97, 0.8), 
+            0 0 60px rgba(222, 184, 97, 0.4),
             0 2px 10px rgba(0, 0, 0, 0.8),
             0 4px 20px rgba(0, 0, 0, 0.9);
     }
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: 300;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
     margin-bottom: 3rem;
     opacity: 0.9;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
@@ -241,9 +237,9 @@ body {
 }
 
 .cta-button.primary {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(135deg, rgba(222, 184, 97, 0.3), rgba(222, 184, 97, 0.1));
     color: #fff;
-    border-color: #00d4ff;
+    border-color: #deb861;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -259,7 +255,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 212, 255, 0.3);
+    background: rgba(222, 184, 97, 0.3);
     transition: left 0.3s ease;
 }
 
@@ -269,12 +265,12 @@ body {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(222, 184, 97, 0.3);
 }
 
 .video-button {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 212, 255, 0.1));
-    border: 2px solid #00d4ff;
+    background: linear-gradient(135deg, rgba(222, 184, 97, 0.3), rgba(222, 184, 97, 0.1));
+    border: 2px solid #deb861;
     color: #fff;
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
@@ -286,7 +282,7 @@ body {
     align-items: center;
     gap: 1rem;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(222, 184, 97, 0.3);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     margin-top: 2rem;
 }
@@ -387,8 +383,8 @@ body {
 }
 
 .fullscreen-btn:hover {
-    background: rgba(0, 212, 255, 0.3);
-    border-color: #00d4ff;
+    background: rgba(222, 184, 97, 0.3);
+    border-color: #deb861;
     transform: scale(1.1);
 }
 
@@ -597,14 +593,12 @@ body {
 
     .hero-title {
         font-size: clamp(1.8rem, 7vw, 2.5rem);
-        letter-spacing: 0.05rem;
         align-items: center;
     }
     
     .title-the {
         font-size: clamp(0.6rem, 2vw, 0.8rem);
         margin-left: 1rem;
-        align-self: flex-start;
     }
     
     .title-main {
@@ -614,13 +608,11 @@ body {
     .title-company {
         font-size: clamp(0.6rem, 2vw, 0.8rem);
         margin-right: 1rem;
-        align-self: flex-end;
     }
 
     .hero-subtitle {
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: clamp(1.3rem, 4vw, 1.6rem);
         padding: 0 0.5rem;
-        letter-spacing: 0;
         line-height: 1.3;
     }
 
@@ -691,10 +683,11 @@ body {
     }
     
     .hero-subtitle {
-        font-size: 0.75rem;
+        font-size: clamp(1rem, 4vw, 1.2rem);
         word-wrap: break-word;
         overflow-wrap: break-word;
         max-width: 100%;
+        letter-spacing: 0.05rem;
     }
     
     .logo {
