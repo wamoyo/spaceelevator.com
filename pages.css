@@ -2,8 +2,7 @@
 
 .page-nav {
     background: #000;
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 100;
 }
 
