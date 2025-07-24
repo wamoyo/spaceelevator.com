@@ -84,8 +84,8 @@ body {
 
 .logo {
     font-size: clamp(1.2rem, 5vw, 2rem);
-    font-weight: 300;
-    letter-spacing: clamp(0.05rem, 1vw, 0.3rem);
+    font-weight: bold;
+    letter-spacing: clamp(0.05rem, 1vw, 0.12rem);
     color: #fff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     white-space: nowrap;
@@ -269,6 +269,7 @@ body {
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
     font-family: inherit;
+    font-weight: bold;
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -282,8 +283,8 @@ body {
 }
 
 .video-button svg {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 .video-button:hover {
@@ -591,6 +592,10 @@ body {
 @media (min-width: 1200px) {
     .hero-title {
         font-size: 5rem;
+    }
+    
+    .logo {
+        font-weight: 500;
     }
 }
 

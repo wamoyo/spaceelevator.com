@@ -61,11 +61,6 @@
     <div id="videoModal" class="video-modal">
         <div class="modal-content">
             <div class="modal-controls">
-                <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
-                    </svg>
-                </button>
                 <span class="close-modal" onclick="closeVideo()">&times;</span>
             </div>
             <video id="interviewVideo" controls>
@@ -96,7 +91,6 @@
             var modal = document.getElementById('videoModal');
             
             video.pause();
-            video.currentTime = 0;
             
             // Exit fullscreen first, then hide modal
             if (document.fullscreenElement) {
@@ -166,7 +160,6 @@
             // If user exits fullscreen manually, close the modal
             if (!document.fullscreenElement && modal.style.display === 'flex') {
                 video.pause();
-                video.currentTime = 0;
                 modal.style.display = 'none';
             }
         });
