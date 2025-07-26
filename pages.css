@@ -27,6 +27,9 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .page-hero-content {
@@ -34,23 +37,39 @@
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .page-hero:before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(222, 184, 97, 0.1) 0%, transparent 70%);
-    animation: rotate 30s linear infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* Page-specific backgrounds */
+.about-hero {
+    background-image: url('images/rise.png');
+    background-position: left 40%;
+}
+
+.technology-hero {
+    background-image: url('images/ocean-elevator.png');
+    background-position: center 92%;
+}
+
+.impact-hero {
+    background-image: url('images/space-based-solar.png');
+    background-position: center 90%;
+}
+
+.contact-hero {
+    background-image: url('images/mars-elevator.png');
+    background-position: center 65%;
 }
 
 .page-title {
