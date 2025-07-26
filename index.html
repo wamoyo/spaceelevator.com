@@ -38,7 +38,7 @@
                     <span></span>
                 </button>
                 <ul class="nav-links">
-                    <button class="close-menu" onclick="toggleMobileMenu()">&times;</button>
+                    <span class="close-menu" onclick="toggleMobileMenu()">&times;</span>
                     <li><a href="#" class="nav-link active">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="technology.html" class="nav-link">Technology</a></li>
@@ -183,13 +183,27 @@
             }
         });
 
-        // Keyboard shortcuts for video modal
+        // Keyboard shortcuts for video modal and mobile menu
         document.addEventListener('keydown', function(event) {
             var modal = document.getElementById('videoModal');
-            if (modal.style.display === 'flex') {
-                if (event.key === 'Escape') {
+            var navLinks = document.querySelector('.nav-links');
+            
+            if (event.key === 'Escape') {
+                // Close video modal if open
+                if (modal && modal.style.display === 'flex') {
                     closeVideo();
-                } else if (event.key === 'f' || event.key === 'F') {
+                }
+                // Close mobile menu if open
+                if (navLinks && navLinks.classList.contains('active')) {
+                    var menuToggle = document.querySelector('.mobile-menu-toggle');
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            }
+            
+            // Video-specific controls
+            if (modal && modal.style.display === 'flex') {
+                if (event.key === 'f' || event.key === 'F') {
                     toggleFullscreen();
                 } else if (event.key === ' ') {
                     event.preventDefault();

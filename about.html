@@ -36,7 +36,7 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <button class="close-menu" onclick="toggleMobileMenu()">&times;</button>
+                <span class="close-menu" onclick="toggleMobileMenu()">&times;</span>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
                 <li><a href="technology.html" class="nav-link">Technology</a></li>
@@ -202,6 +202,18 @@
             if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 menuToggle.classList.remove('active');
+            }
+        });
+
+        // Close menu with Esc key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                var navLinks = document.querySelector('.nav-links');
+                var menuToggle = document.querySelector('.mobile-menu-toggle');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
             }
         });
     </script>
