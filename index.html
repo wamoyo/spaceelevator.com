@@ -82,7 +82,7 @@
             <div class="modal-controls">
                 <span class="close-modal" onclick="closeVideo()">&times;</span>
             </div>
-            <video id="interviewVideo" controls>
+            <video id="interviewVideo" controls controlsList="nofullscreen">
                 <source src="https://space-elevator-assets.s3.us-east-1.amazonaws.com/space-elevator-bloomberg-interview-bradley-edwards.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -181,6 +181,31 @@
                 video.pause();
                 modal.style.display = 'none';
             }
+        });
+
+        // Progressive image loading for better performance on slow connections
+        function loadHighResBackground() {
+            var heroContainer = document.querySelector('.hero-container');
+            var highResImage = new Image();
+            
+            highResImage.onload = function() {
+                // Image has loaded, now apply the high-res class
+                heroContainer.classList.add('high-res');
+            };
+            
+            highResImage.onerror = function() {
+                // If high-res image fails to load, keep the low-res version
+                console.log('High-res background image failed to load, keeping low-res version');
+            };
+            
+            // Start loading the high-res image
+            highResImage.src = 'images/space-elevator-illustration-from-space.png';
+        }
+        
+        // Start loading high-res image after page load
+        window.addEventListener('load', function() {
+            // Start immediately after page load
+            loadHighResBackground();
         });
 
         // Keyboard shortcuts for video modal and mobile menu
