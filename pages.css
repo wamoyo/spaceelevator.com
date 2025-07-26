@@ -21,6 +21,14 @@
     color: #fff;
 }
 
+body {
+    background: #0a0a0a;
+}
+
+html {
+    background: #0a0a0a;
+}
+
 .page-hero {
     background: linear-gradient(135deg, #000000 0%, #3d2f00 50%, #5c4400 100%);
     padding: 4rem 0;
@@ -601,5 +609,113 @@
     .comparison-section h3 {
         font-size: 1.8rem;
         max-width: 100%;
+    }
+}
+
+/* Footer Styles */
+.page-footer {
+    background: #000;
+    /* background-image: url('images/station.jpg');
+    background-size: cover;
+    background-position: 25% center;
+    background-repeat: no-repeat; */
+    padding: 2rem 0;
+    margin-top: 0;
+    position: relative;
+}
+
+.page-footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.footer-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Commented out footer sections for future use
+.footer-section h4 {
+    color: #deb861;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #deb861;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(222, 184, 97, 0.2);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+*/
+
+/* Mobile adjustments for footer */
+@media (max-width: 768px) {
+    .page-footer {
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+    
+    .footer-container {
+        padding: 0 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
