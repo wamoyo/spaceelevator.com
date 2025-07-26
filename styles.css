@@ -14,6 +14,7 @@
 
 html, body {
     min-width: 320px;
+    min-height: 500px;
 }
 
 html {
@@ -28,6 +29,7 @@ body {
     width: 100vw;
     max-width: 100%;
     height: 100vh;
+    min-height: 500px;
     background-image: url('images/space-elevator-illustration-from-space.png');
     background-size: cover;
     background-position: center;
@@ -175,24 +177,38 @@ body {
 
 /* DO NOT CHANGE THESE PROPORTIONAL TITLE POSITIONING VALUES - CAREFULLY TUNED */
 .title-the {
-    font-size: 0.6em;
+    font-size: 15vw;
     font-weight: 500;
-    margin-left: -7.5em; /* DO NOT CHANGE - proportional positioning */
+    margin-left: -2.8rem;
     margin-bottom: -0.2em;
 }
 
-.title-main {
-    font-size: 1em;
+.title-space {
+    font-size: 22vw;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+.title-elevator {
+    font-size: 16.75vw;
     font-weight: 500;
     margin: 0;
     text-align: center;
 }
 
 .title-company {
-    font-size: 0.6em;
+    font-size: 10vw;
     font-weight: 500;
-    margin-right: -5.5em; /* DO NOT CHANGE - proportional positioning */
-    margin-top: 0.1em; /* DO NOT CHANGE - fine-tuned vertical alignment */
+    margin-right: -.5rem;
+    margin-top: -0.1rem; /* DO NOT CHANGE - fine-tuned vertical alignment */
+}
+
+.title-main-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 @keyframes glow {
@@ -591,20 +607,72 @@ body {
 }
 
 @media (min-width: 481px) {
-    .hero-title {
-        font-size: 2.6rem; /* DO NOT CHANGE - carefully tuned for smooth scaling */
+    .title-main-line {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.2em;
     }
-}
 
-@media (min-width: 768px) {
-    .hero-title {
-        font-size: 4rem;
+    .title-the {
+        font-size: 8.5vw;
+        font-weight: 500;
+        margin-bottom: -0.15em;
+        position: relative;
+        left: -20.9vw;
+    }
+
+    .title-space {
+        font-size: 11vw;
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+    }
+
+    .title-elevator {
+        font-size: 11vw;
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+    }
+
+    .title-company {
+        font-size: 8vw;
+        font-weight: 500;
+        margin-top: -0.05em;
+        position: relative;
+        right: -9.5vw;
     }
 }
 
 @media (min-width: 1200px) {
-    .hero-title {
-        font-size: 5rem;
+    .title-the {
+        font-size: 6rem;
+        font-weight: 500;
+        margin-bottom: -0.15em;
+        position: relative;
+        left: -17.5rem;
+    }
+
+    .title-space {
+        font-size: 8.25rem;
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+    }
+
+    .title-elevator {
+        font-size: 8.25rem;
+        font-weight: 500;
+        margin: 0;
+        text-align: center;
+    }
+
+    .title-company {
+        font-size: 6rem;
+        font-weight: 500;
+        margin-top: -0.05em;
+        position: relative;
+        right: -7rem;
     }
     
     .logo {
@@ -625,11 +693,6 @@ body {
 @media (max-width: 480px) {
     .main-nav {
         padding: 0.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: clamp(1.3rem, 4vw, 1.6rem);
-        padding: 0 0.5rem;
     }
 
     .hero-content {
@@ -676,14 +739,6 @@ body {
     
     .hero-container-inner {
         padding: 0 0.25rem;
-    }
-    
-    .hero-subtitle {
-        font-size: clamp(1rem, 4vw, 1.2rem);
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        max-width: 100%;
-        letter-spacing: 0.05rem;
     }
     
     .logo {
