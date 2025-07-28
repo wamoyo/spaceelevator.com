@@ -321,19 +321,13 @@ html {
 }
 
 /* Timeline */
+.timeline-section {
+    margin-bottom: 5rem;
+}
+
 .timeline {
     position: relative;
     padding-left: 50px;
-}
-
-.timeline:before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: rgba(222, 184, 97, 0.3);
 }
 
 .timeline-item {
@@ -341,16 +335,71 @@ html {
     margin-bottom: 3rem;
 }
 
+/* Line segment for each item (except last) */
+.timeline-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 17px;
+    width: 2px;
+    height: calc(100% + 3rem);
+    background: #deb861;
+}
+
+/* Dotted line for future items */
+.timeline-item.future:not(:last-child):after {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4) 50%, transparent 50%);
+    background-size: 2px 8px;
+    background-repeat: repeat-y;
+    background-color: transparent;
+}
+
+/* Circle for each item */
 .timeline-item:before {
     content: '';
     position: absolute;
-    left: -35px;
+    left: -37px;
     top: 5px;
     width: 12px;
     height: 12px;
     background: #deb861;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(222, 184, 97, 0.5);
+    z-index: 2;
+}
+
+/* Completed circles - move slightly right */
+.timeline-item.completed:before {
+    left: -35px;
+}
+
+/* Hollow circle for future items */
+.timeline-item.future:before {
+    background: #0a0a0a;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+}
+
+.timeline-item.completed .timeline-date {
+    color: #deb861;
+    font-weight: 400;
+}
+
+.timeline-item.future .timeline-date {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+.timeline-item.completed .timeline-content h4 {
+    color: #fff;
+}
+
+.timeline-item.future .timeline-content h4 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline-item.future .timeline-content p {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .timeline-date {
@@ -604,12 +653,21 @@ html {
         padding-left: 30px;
     }
 
-    .timeline:before {
-        left: 10px;
+    .timeline-item:after {
+        left: -20px;
+        height: calc(100% + 2rem);
     }
 
     .timeline-item:before {
+        left: -27px;
+    }
+
+    .timeline-item.completed:before {
         left: -25px;
+    }
+
+    .timeline-item.future:before {
+        left: -29px;
     }
     
     .founder-quote {
