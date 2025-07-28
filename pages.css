@@ -651,23 +651,12 @@ html {
 
     .timeline {
         padding-left: 30px;
+        margin-left: 10px;
     }
 
     .timeline-item:after {
-        left: -20px;
+        left: -10px;
         height: calc(100% + 2rem);
-    }
-
-    .timeline-item:before {
-        left: -27px;
-    }
-
-    .timeline-item.completed:before {
-        left: -25px;
-    }
-
-    .timeline-item.future:before {
-        left: -29px;
     }
     
     .founder-quote {
