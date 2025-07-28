@@ -323,6 +323,9 @@ html {
 /* Timeline */
 .timeline-section {
     margin-bottom: 5rem;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .timeline {
