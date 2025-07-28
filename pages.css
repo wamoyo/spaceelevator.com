@@ -219,37 +219,31 @@ html {
 }
 
 .team-container {
-    max-width: 1800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
-    justify-items: center;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .team-member {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(222, 184, 97, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 2rem;
     transition: all 0.3s ease;
-    max-width: 400px;
-    width: 100%;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
 }
 
-.team-member:hover {
-    transform: translateY(-3px);
-    background: rgba(222, 184, 97, 0.05);
-    border-color: rgba(222, 184, 97, 0.3);
-}
 
 .team-member-name {
     font-size: 1.5rem;
@@ -267,10 +261,18 @@ html {
     letter-spacing: 0.05rem;
 }
 
+.team-member-bio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .team-member-bio p {
     font-size: 1rem;
     line-height: 1.7;
     opacity: 0.85;
+    margin: 0;
 }
 
 /* Vision Section */
@@ -572,12 +574,13 @@ html {
     }
     
     .team-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
     .team-member {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 400px;
     }
     
     .team-container {
