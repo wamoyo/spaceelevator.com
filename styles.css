@@ -292,7 +292,6 @@ body {
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(222, 184, 97, 0.3);
 }
 
