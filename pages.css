@@ -1018,6 +1018,65 @@ p {
 }
 */
 
+/* Comparison Table */
+.comparison-table {
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1100px;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-header {
+    background: rgba(222, 184, 97, 0.1);
+    font-weight: bold;
+}
+
+.comparison-category {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.comparison-column {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+    color: #deb861;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-column:last-child {
+    border-right: none;
+}
+
+.comparison-cell {
+    padding: 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+}
+
+.comparison-cell:last-child {
+    border-right: none;
+}
+
 /* Mobile adjustments for footer */
 @media (max-width: 768px) {
     .page-footer {
@@ -1040,6 +1099,25 @@ p {
     
     .footer-nav-link {
         font-size: 0.9rem;
+    }
+    
+    .comparison-table {
+        overflow-x: auto;
+    }
+    
+    .comparison-row {
+        grid-template-columns: 150px 1fr 1fr 1fr;
+        min-width: 600px;
+    }
+    
+    .comparison-category {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .comparison-column, .comparison-cell {
+        padding: 0.75rem;
+        font-size: 0.8rem;
     }
 }
 
