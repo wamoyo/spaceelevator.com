@@ -146,7 +146,7 @@ html {
     text-align: center;
     margin-bottom: 3rem;
     opacity: 0.9;
-    max-width: 1200px;
+    max-width: 1270px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -608,7 +608,7 @@ p {
 /* Contact Form */
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
 }
 
 .form-group {
@@ -619,14 +619,14 @@ p {
     display: block;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: #deb861;
+    color: #fff;
 }
 
 .form-control {
     width: 100%;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(222, 184, 97, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     color: #fff;
     font-family: inherit;
@@ -636,7 +636,7 @@ p {
 
 .form-control:focus {
     outline: none;
-    border-color: #deb861;
+    border-color: rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.08);
 }
 
@@ -651,6 +651,10 @@ p {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.checkbox-item label {
+    margin-bottom: 0;
 }
 
 .checkbox-item input[type="checkbox"] {
@@ -672,6 +676,23 @@ p {
     transition: all 0.3s ease;
     display: block;
     margin: 0 auto;
+}
+
+/* Button styling for form buttons using cta-button class */
+button.cta-button {
+    font-family: inherit;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Form Message */
+.form-message {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #00d4ff;
+    display: none;
 }
 
 .submit-button:hover {

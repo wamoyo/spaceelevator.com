@@ -57,15 +57,13 @@
         <section class="content-section">
             <div class="page-container-wrapper">
                 <div class="content-wrapper">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <p style="font-size: 1.3rem; opacity: 0.9;">
-                        Building the space elevator will be the endeavor of our lifetimes. It will herald a new age for human civilization. We're looking for visionaries, innovators, and believers who want to change the course of human history.
-                    </p>
+                <div class="intro-section">
+                    <p>Building the space elevator will be the endeavor of our lifetimes. It will herald a new age for human civilization. We're looking for visionaries, innovators, and believers who want to change the course of human history.</p>
                 </div>
 
-                <h2 class="section-title">How You Can Get Involved</h2>
+                <h2 class="section-title">Contact Us</h2>
                 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form panel-style" id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" class="form-control" required>
@@ -81,87 +79,16 @@
                         <input type="tel" id="phone" name="phone" class="form-control">
                     </div>
 
-                    <div class="form-group">
-                        <label>I'm interested in:</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="updates" name="interest" value="updates">
-                                <label for="updates">General Updates</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="invest" name="interest" value="invest">
-                                <label for="invest">Investing in the Space Elevator</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="media" name="interest" value="media">
-                                <label for="media">Media Inquiries</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="science" name="interest" value="science">
-                                <label for="science">Science & Engineering Team</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="art" name="interest" value="art">
-                                <label for="art">Art & Architecture Team</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="use" name="interest" value="use">
-                                <label for="use">Using the Space Elevator</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="business" name="interest" value="business">
-                                <label for="business">Building Business Opportunities</label>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="form-group">
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" name="message" rows="5" class="form-control"></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-button">Join the Future</button>
+                    <button type="submit" class="cta-button primary">Make Contact&nbsp;➤</button>
                 </form>
 
-                <div id="formMessage" style="text-align: center; margin-top: 2rem; font-size: 1.2rem; color: #00d4ff; display: none;"></div>
-
-                <div style="margin-top: 5rem;">
-                    <h2 class="section-title">Ways to Contribute</h2>
-                    <div class="vision-grid">
-                        <div class="vision-card">
-                            <div class="vision-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#deb861" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 21h6"/>
-                                    <path d="M12 17h.01"/>
-                                    <path d="M12 3a6 6 0 00-6 6c0 1.7.7 3.2 1.8 4.3a2 2 0 00.6 1.7h7.2a2 2 0 00.6-1.7A6.3 6.3 0 0018 9a6 6 0 00-6-6z"/>
-                                </svg>
-                            </div>
-                            <h3>Share Your Expertise</h3>
-                            <p>Engineers, scientists, and visionaries—your knowledge can help make this dream a reality.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="vision-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#deb861" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 11l18-5v12l-18-5z"/>
-                                    <path d="M11.6 16.8a3 3 0 11-5.8-1.6"/>
-                                </svg>
-                            </div>
-                            <h3>Spread the Word</h3>
-                            <p>Help us build momentum by sharing our vision with your network and community.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="vision-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#deb861" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M11 12h2a2 2 0 012 2v6a2 2 0 01-2 2h-2a2 2 0 01-2-2v-6a2 2 0 012-2z"/>
-                                    <path d="M7 12V8a2 2 0 012-2h6a2 2 0 012 2v4"/>
-                                    <path d="M7 12h10"/>
-                                </svg>
-                            </div>
-                            <h3>Partner With Us</h3>
-                            <p>Organizations and businesses can join us in developing the technologies and infrastructure needed.</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="formMessage" class="form-message"></div>
 
                 </div>
             </div>
