@@ -782,10 +782,10 @@ html {
 /* Footer Styles */
 .page-footer {
     background: #000;
-    /* background-image: url('images/station.jpg');
+    background-image: url('images/station.jpg');
     background-size: cover;
     background-position: 25% center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     padding: 2rem 0;
     margin-top: 0;
     position: relative;
@@ -812,6 +812,32 @@ html {
 
 .footer-content {
     text-align: center;
+}
+
+.footer-nav {
+    margin-bottom: 1rem;
+}
+
+.footer-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+    color: #deb861;
 }
 
 .footer-content p {
@@ -878,11 +904,30 @@ html {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
+    
+    .footer-nav-links {
+        gap: 1.5rem;
+    }
+    
+    .footer-nav-link {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    
+    .footer-nav-links {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-nav-link {
+        font-size: 0.85rem;
+        padding: 0.25rem 0;
     }
 }
