@@ -178,7 +178,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.1;
 }
 
 /* DO NOT CHANGE THESE PROPORTIONAL TITLE POSITIONING VALUES - CAREFULLY TUNED */
@@ -419,7 +418,6 @@ body {
     font-size: 3rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    line-height: 1;
 }
 
 .close-modal:hover {
@@ -485,7 +483,6 @@ body {
     font-size: 3rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    line-height: 1;
 }
 
 .close-menu:hover {

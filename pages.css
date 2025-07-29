@@ -166,7 +166,6 @@ html {
 
 .founder-bio p {
     font-size: 1.1rem;
-    line-height: 1.8;
     margin-bottom: 1.5rem;
     opacity: 0.9;
 }
@@ -234,7 +233,7 @@ html {
 }
 
 .team-member {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgb(188 196 255 / 10%);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 2rem;
@@ -270,7 +269,6 @@ html {
 
 .team-member-bio p {
     font-size: 1rem;
-    line-height: 1.7;
     opacity: 0.85;
     margin: 0;
 }
@@ -316,7 +314,6 @@ html {
 
 .vision-card p {
     font-size: 1rem;
-    line-height: 1.6;
     opacity: 0.8;
 }
 
@@ -420,29 +417,139 @@ html {
 
 .timeline-content p {
     font-size: 1.1rem;
-    line-height: 1.6;
     opacity: 0.8;
 }
 
-/* Technology Page Specific */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin-bottom: 4rem;
-}
-
-.tech-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(222, 184, 97, 0.2);
+/* Panel Visual Style - Just borders, background, etc */
+.panel-style {
+    background: rgb(188 196 255 / 10%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 2rem;
     transition: all 0.3s ease;
 }
 
-.tech-card:hover {
-    background: rgba(222, 184, 97, 0.05);
-    transform: scale(1.02);
+/* Panel Layout - For vertical card layout */
+.panel-layout {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Panel Content Styling */
+.panel-style h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #deb861;
+    margin-bottom: 1rem;
+}
+
+.panel-style ul {
+    list-style: none;
+}
+
+.panel-style li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.panel-style li:before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #deb861;
+}
+
+.book-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+}
+
+.book-panel span {
+    font-size: 0.9rem;
+}
+
+.book-panel a {
+    color: #deb861;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+
+.book-panel a:hover {
+    opacity: 0.7;
+}
+
+/* Team member specific styling */
+.team-member-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+.team-member-bio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.team-member-bio p {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* LinkedIn links in team panels */
+.linkedin-link {
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+.linkedin-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.linkedin-link img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Technology Page Specific */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 4rem;
+}
+
+.tech-card {
+    background: rgb(188 196 255 / 10%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
 }
 
 .tech-card h3 {
@@ -579,10 +686,8 @@ html {
     
     .vision-card, .tech-card {
         padding: 1.5rem;
-    }
-    
-    .tech-card {
-        padding: 1.5rem;
+        width: 100%;
+        max-width: 400px;
     }
     
     .form-control {
@@ -620,9 +725,14 @@ html {
     }
 
     .tech-grid {
-        grid-template-columns: 1fr;
+        gap: 1.5rem;
         max-width: 100%;
         overflow-x: hidden;
+    }
+    
+    .tech-card {
+        width: 100%;
+        max-width: 400px;
     }
     
     .team-grid {
@@ -691,7 +801,6 @@ html {
         letter-spacing: 0;
         padding: 0;
         max-width: 100%;
-        line-height: 1.2;
     }
     
     .founder-name {
@@ -760,6 +869,7 @@ html {
         margin: 0;
         padding: 1.25rem;
         max-width: 100%;
+        width: 100%;
     }
     
     .vision-card p, .tech-card p, .tech-card li {
